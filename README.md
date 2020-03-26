@@ -25,7 +25,14 @@ for some functions, so that's one limitation of this proof-of-concept.
 Any other text is assumed to be an RPN expression. For example:
  * 1 2 3: add the numbers 1 2 3 to the stack
  * 1 2 +: add 3 to the stack
- * 1 2 3 3 collect sum print: add [1, 2, 3] to the stack and print 6
+ * 1 2 3 3 collect sum print: add 6 to the stack and print it
+
+This last example is adding the numbers `1 2 3 3` to the
+stack, then collect pops the top value off the stack (3), which tells
+it to pop 3 more items of the stack, and put them back on the stack as
+a list. `sum` then pops this item and adds the sum (6). You could play
+with this by entering one value at a time at the REPL, followed by 
+`stack` to see the current contents of the stack.
 
 Note that python built-ins like sum and print are available, along with the
  built-in operators and functions from math, by default.
