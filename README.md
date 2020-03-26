@@ -1,5 +1,8 @@
 # python-rpn
 
+    $ ./rpn.py <<< "3 4 + 5 * log2 print"
+    5.129283016944966
+
 RPN is a proof-of-concept interpreter for entering Python commands
 in a simple reverse-Polish style. The interpreter has the following
 meta-commands to control the program's state:
